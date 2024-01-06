@@ -6,14 +6,34 @@ html {
     font-size: 16px;
 }
 
-body {
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+body.light-theme {
     height: 100%;
     min-height: 100%;
     font: normal 400 15px/24px 'Roboto', sans-serif;
+    color: #121212;
     background-color: #f6f7f8;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s;
+}
+
+body.dark-theme {
+    height: 100%;
+    min-height: 100%;
+    font: normal 400 15px/24px 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f6f7f8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s;
 }
 
 div {
@@ -37,12 +57,31 @@ a {
 
 button {
     padding: 8px;
-    display: inline-block;
-    text-decoration: none;
-    background-color: #414b52;
     margin: 10px;
-    color: #fff;
-    border-radius: 3px;
+    border-radius: 10px;
+    border: 0;
+    background: lightgray;
+}
+
+
+.main-btn.light-theme {
+    background: lightgray;
+    transition: 0.3s;
+}
+
+.main-btn.dark-theme {
+    background: darkslategray;
+    transition: 0.3s;
+}
+
+.main-btn.light-theme:hover {
+    background: orange;
+    transition: 0.3s;
+}
+
+.main-btn.dark-theme:hover {
+    background: #6e87e1;
+    transition: 0.3s;
 }
 
 a:hover {

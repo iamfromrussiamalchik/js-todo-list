@@ -17,7 +17,7 @@
 
 /* Стили для модальных окон */
 
-.modal {
+.modal, .updateForm, .deleteForm {
     /* Скрываем окна  */
     opacity: 0;
     visibility: hidden;
@@ -42,10 +42,53 @@
     transition: 0.3s all;
 }
 
+.deleteForm {
+    width: 300px;
+}
+
+.delete__main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.delete__title {
+    align-self: center;
+    margin-top: -8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.modal_light-theme {
+    background-color: #f6f7f8; /* white color */
+}
+
+.label_light-theme {
+    color: #121212;
+}
+
+.input_light-theme {
+    background-color: #f6f7f8; /* white color */
+/*    border*/
+}
+
+.input_dark-theme {
+/*    background-color: #121212; !* black color *!*/
+}
+
+.modal_dark-theme {
+    background-color: #121212; /* black color */
+}
+
+.label_dark-theme {
+    color: #f6f7f8;
+}
 /* Стили для активных классов подложки и окна */
 
 .modal.active,
-.overlay.active {
+.updateForm.active,
+.overlay.active,
+.deleteForm.active {
     opacity: 1;
     visibility: visible;
 }
@@ -97,7 +140,7 @@
     cursor: pointer;
 }
 
-.form-errors {
+.form-errors, .formUpd-errors {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
